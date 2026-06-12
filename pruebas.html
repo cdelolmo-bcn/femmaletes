@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Pruebas de la lógica de generación. No tocan Supabase ni cargan nada
+       externo: solo este origen. -->
+  <meta http-equiv="Content-Security-Policy" content="
+    default-src 'self';
+    script-src 'self';
+    style-src 'unsafe-inline';
+    base-uri 'self';
+    form-action 'none';
+  ">
+  <title>FemMaletes · Pruebas de generación</title>
+  <style>
+    body { font-family: system-ui, sans-serif; max-width: 640px; margin: 24px auto; padding: 0 14px; color: #21354f; }
+    h1 { font-size: 1.2rem; }
+    #resumen { font-size: 1.05rem; font-weight: 600; padding: 10px 14px; border-radius: 10px; margin: 14px 0; }
+    .todo-ok   { background: #e3f3ec; color: #2c6b50; }
+    .hay-fallos{ background: #fae4e0; color: #a04335; }
+    table { border-collapse: collapse; width: 100%; font-size: .9rem; }
+    td { padding: 6px 8px; border-bottom: 1px solid #d6dde4; }
+    td:first-child { width: 30px; }
+  </style>
+</head>
+<body>
+  <h1>🧪 Pruebas de la generación de listas (Fase 1)</h1>
+  <p>Si todo está en verde, las reglas de cantidades, clima, umbrales de días,
+     deduplicado y ropa de cama funcionan como dice la especificación.</p>
+  <div id="resumen">Ejecutando…</div>
+  <table><tbody id="filas"></tbody></table>
+  <script type="module" src="pruebas-generacion.js"></script>
+</body>
+</html>

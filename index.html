@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ==========================================================================
+       FemMaletes · Fase 0 — Esqueleto de la app
+       GitHub Pages no permite cabeceras HTTP propias, así que la política de
+       seguridad de contenidos (CSP) va en esta meta-etiqueta. Solo se permite:
+       · scripts: este mismo origen + el CDN de supabase-js (jsdelivr)
+       · conexiones: Supabase (https y websocket para el tiempo real futuro)
+         y Open-Meteo (clima, Fase 5)
+       · estilos y fuentes: este origen + Google Fonts
+       Nada más puede cargarse ni conectarse. (Estándar de seguridad 5.4)
+       ========================================================================== -->
+  <meta http-equiv="Content-Security-Policy" content="
+    default-src 'self';
+    script-src 'self' https://cdn.jsdelivr.net;
+    connect-src 'self' https://*.supabase.co wss://*.supabase.co https://api.open-meteo.com https://geocoding-api.open-meteo.com;
+    style-src 'self' https://fonts.googleapis.com;
+    font-src https://fonts.gstatic.com;
+    img-src 'self' data:;
+    base-uri 'self';
+    form-action 'none';
+  ">
+
+  <title>FemMaletes</title>
+
+  <!-- Tipografías de la identidad visual (las del prototipo aprobado) -->
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+  <div class="wrap">
+    <div id="app"><!-- Aquí pinta ui.js --></div>
+    <p class="version">FemMaletes · <span id="version"></span></p>
+  </div>
+
+  <!-- Punto de entrada. type="module" permite los import entre módulos. -->
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

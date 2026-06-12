@@ -12,7 +12,7 @@
  * ============================================================================ */
 
 /** URL del proyecto de Supabase (panel → Settings → API → Project URL). */
-export const SUPABASE_URL = 'https://eexhyvnlwnykwipfexvx.supabase.co/rest/v1/';
+export const SUPABASE_URL = 'https://eexhyvnlwnykwipfexvx.supabase.co';
 
 /** Clave anónima (panel → Settings → API → anon public). */
 export const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVleGh5dm5sd255a3dpcGZleHZ4Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODEyMTQ4MTEsImV4cCI6MjA5Njc5MDgxMX0.yZLtgM9iwa9rRKe3ID3VzKHwPlNw4iltyf6Y6Xk1P0c';
